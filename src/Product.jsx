@@ -67,8 +67,8 @@ function Product({ product, cart, setCart }) {
         <p className="text-sm sm:text-sm font-semibold">
           {`$${product.price}`}.00
         </p>
-        <p className="text-sm text-gray-500">{product.description}</p>
-        <h2 className="text-sm uppercase text-gray-500">
+        <p className="text-sm text-font-gray">{product.description}</p>
+        <h2 className="text-sm uppercase text-font-gray">
           Size{' '}
           {selectedSizeLabel && (
             <span className="text-black">{selectedSizeLabel}</span>
@@ -85,8 +85,8 @@ function Product({ product, cart, setCart }) {
               onClick={() => handleSizeClick(sizeOption.id)}
               className={`w-10 h-10 text-xs text-center ${
                 selectedSize === sizeOption.id
-                  ? 'border-2 text-gray-900 border-gray-900'
-                  : 'border text-gray-300 border-gray-300'
+                  ? 'border-2 text-font-black border-border-dark-gray'
+                  : 'border text-font-gray border-border-light-gray'
               }`}
             >
               {sizeOption.label}
@@ -96,7 +96,7 @@ function Product({ product, cart, setCart }) {
 
         <button
           onClick={addToCart}
-          className="mt-4 border-2 border-black hover:bg-black text-black hover:text-white font-bold py-2 px-4 transition duration-200"
+          className="mt-4 border-2 border-border-dark-gray hover:bg-border-dark-gray text-black hover:text-white font-bold py-2 px-4 transition duration-200"
         >
           ADD TO CART
         </button>

@@ -13,8 +13,10 @@ function Header({ cart }) {
       <div className={`relative`}>
         <button
           onClick={toggleCartOpen}
-          className={`flex items-center p-2 text-gray-500 text-xs whitespace-nowrap ${
-            isCartOpen ? 'bg-white border-r border-l border-gray-300' : ''
+          className={`flex items-center p-2 text-font-gray text-xs whitespace-nowrap ${
+            isCartOpen
+              ? 'bg-white border-r border-l border-border-light-gray'
+              : ''
           } box-border`}
           aria-label={`My Cart ( ${totalItems} )`}
         >
@@ -23,7 +25,7 @@ function Header({ cart }) {
         </button>
 
         {isCartOpen && (
-          <div className="absolute right-0 w-80 bg-white border-r border-b border-l border-gray-300">
+          <div className="absolute right-0 w-80 bg-white border-r border-b border-l border-border-light-gray">
             {totalItems > 0 ? (
               cart.map((item, index) => (
                 <div key={index} className="flex items-center space-x-2 my-2">
