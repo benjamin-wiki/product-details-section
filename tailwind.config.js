@@ -6,9 +6,6 @@ module.exports = {
       colors: {
         'header-gray': '#F6F6F7',
       },
-      screens: {
-        custom: '940px',
-      },
     },
   },
   plugins: [],

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 function Header({ cart }) {
@@ -16,6 +16,7 @@ function Header({ cart }) {
           className={`flex items-center p-2 text-gray-500 text-xs whitespace-nowrap ${
             isCartOpen ? 'bg-white border-r border-l border-gray-300' : ''
           } box-border`}
+          aria-label={`My Cart ( ${totalItems} )`}
         >
           <span className="md:inline hidden">My Cart ( {totalItems} )</span>
           <span className="md:hidden inline">🛒</span>

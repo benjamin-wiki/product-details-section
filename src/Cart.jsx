@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 function Cart({ products, isOpen, onClose }) {
